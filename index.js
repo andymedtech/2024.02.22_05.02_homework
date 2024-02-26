@@ -1,14 +1,6 @@
 const express = require("express");
 const app = express();
 
-app.use(express.static("public"));
-// app.use(express.static("cats"));
-
-app.get("/", function (req, res) {
-  console.log("Request success");
-  res.end("Request success");
-});
-
 app.get("/cats", function (req, res) {
   res.end("The cats are very fluffy");
 });
