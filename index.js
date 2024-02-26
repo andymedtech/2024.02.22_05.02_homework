@@ -21,6 +21,11 @@ app.get("/birds", function (req, res) {
   res.end("Birds can fly");
 });
 
+app.get("/*", function (req, res) {
+  // console.log("ok");
+  res.end("Page not Found. Use: /cats, /dogs, /mouses, /horses, /birds");
+});
+
 app.listen(8080, function () {
   console.log("Server has been started on port 8080");
 });
